@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Quiz | PrepAI</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="navbar"><a class="brand" href="index.html"><span class="logo">P</span> Prep<span>AI</span></a><nav><a href="dashboard.html">Dashboard</a><a href="generator.html">New Quiz</a></nav><button class="theme-btn" id="themeBtn">☾</button></header>
+<main class="container quiz-page">
+  <div class="quiz-head"><div><span class="pill" id="quizExam">MDCAT</span><h2 id="quizTopic">Practice Quiz</h2></div><div class="timer" id="timer">--:--</div></div>
+  <div class="progress"><span id="progress"></span></div>
+  <div class="quiz-layout">
+    <aside><p>QUESTIONS</p><div id="questionNumbers"></div></aside>
+    <section class="card question-card"><div class="q-meta">Question <span id="questionCount"></span><b id="difficultyLabel">Medium</b></div><h1 id="questionText">Loading question...</h1><div id="options" class="options"></div><div class="quiz-nav"><button id="prevBtn" class="btn secondary">← Previous</button><button id="nextBtn" class="btn primary">Next →</button></div></section>
+  </div>
+</main>
+<script src="js/app.js"></script><script src="js/quiz.js"></script>
+</body></html>

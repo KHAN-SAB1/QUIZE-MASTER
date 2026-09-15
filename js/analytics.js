@@ -1,0 +1,3 @@
+const h=JSON.parse(localStorage.getItem("prepai_history")||"[]"),avg=h.length?Math.round(h.reduce((a,x)=>a+x.score,0)/h.length):0,best=h.length?Math.max(...h.map(x=>x.score)):0;
+document.getElementById("average").textContent=avg+"%";document.getElementById("best").textContent=best+"%";document.getElementById("attempts").textContent=h.length;document.getElementById("correctAnswers").textContent=h.reduce((a,x)=>a+x.correct,0);
+document.getElementById("bars").innerHTML=h.slice(0,10).reverse().map(x=>`<div class="bar-row"><span>${x.topic.slice(0,22)}</span><div class="bar"><i style="width:${x.score}%"></i></div><b>${x.score}%</b></div>`).join("")||"<p class='form-note'>Complete a quiz to see your analytics.</p>";

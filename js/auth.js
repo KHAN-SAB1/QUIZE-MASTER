@@ -1,0 +1,1 @@
+document.getElementById("loginForm").addEventListener("submit",e=>{e.preventDefault();const email=document.getElementById("email").value;localStorage.setItem("prepai_demo_user",JSON.stringify({email}));document.getElementById("loginMessage").textContent="Demo login successful. Supabase Auth will replace this later.";setTimeout(()=>location.href="dashboard.html",700);});

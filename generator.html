@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>AI Quiz Generator | PrepAI</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="navbar"><a class="brand" href="index.html"><span class="logo">P</span> Prep<span>AI</span></a><nav><a href="index.html">Home</a><a href="exams.html">Exams</a><a class="active" href="generator.html">AI Quiz</a><a href="dashboard.html">Dashboard</a><a href="login.html" class="nav-btn">Login</a></nav><button class="theme-btn" id="themeBtn">☾</button></header>
+<main class="container page narrow">
+  <div class="page-title center"><p class="eyebrow">✦ AI QUIZ GENERATOR</p><h1>Create your practice quiz</h1><p>Choose an exam, subject and topic. The next step will connect this form to your AI service.</p></div>
+  <form id="generatorForm" class="card form-card">
+    <div class="form-grid">
+      <label>EXAM<select id="exam"><option>IELTS</option><option selected>MDCAT</option><option>ECAT</option><option>KMU</option><option>ISSB</option><option>Custom</option></select></label>
+      <label>SUBJECT<select id="subject"><option>Biology</option><option>Chemistry</option><option>Physics</option><option>English</option></select></label>
+    </div>
+    <label>TOPIC<input id="topic" required placeholder="e.g. Genetics, Algebra, Human Physiology"></label>
+    <div class="form-grid">
+      <label>DIFFICULTY<select id="difficulty"><option>Easy</option><option selected>Medium</option><option>Hard</option><option>Mixed</option></select></label>
+      <label>QUESTIONS<select id="count"><option>5</option><option selected>10</option><option>15</option><option>20</option><option>30</option></select></label>
+    </div>
+    <label>TIME LIMIT<select id="timer"><option value="0">No timer</option><option value="5">5 minutes</option><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="20">20 minutes</option></select></label>
+    <button class="btn primary full big" type="submit">✦ Generate Practice Quiz</button>
+    <p id="generatorMessage" class="form-note"></p>
+  </form>
+</main>
+<footer><b>PrepAI</b><span>Practice smart. Prepare better.</span></footer>
+<script src="js/app.js"></script><script src="js/generator.js"></script>
+</body></html>

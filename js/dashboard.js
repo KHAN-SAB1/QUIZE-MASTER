@@ -1,0 +1,4 @@
+const h=JSON.parse(localStorage.getItem("prepai_history")||"[]");
+const avg=h.length?Math.round(h.reduce((a,x)=>a+x.score,0)/h.length):0,best=h.length?Math.max(...h.map(x=>x.score)):0;
+document.getElementById("quizCount").textContent=h.length;document.getElementById("avgScore").textContent=avg+"%";document.getElementById("bestScore").textContent=best+"%";document.getElementById("questionCount").textContent=h.reduce((a,x)=>a+x.questions,0);
+document.getElementById("recent").innerHTML=h.slice(0,5).map(x=>`<div class="history-row"><span>✦</span><div><b>${x.exam} · ${x.topic}</b><small>${new Date(x.date).toLocaleDateString()}</small></div><strong>${x.score}%</strong></div>`).join("")||"<p class='form-note'>No quizzes yet. Create your first AI quiz.</p>";
